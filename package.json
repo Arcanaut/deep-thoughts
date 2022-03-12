@@ -6,6 +6,30 @@
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "name": "deep-thoughts",
+  "version": "1.0.0",
+  "description": "A MERN stack social media application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arcanaut/deep-thoughts.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Arcanaut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arcanaut/deep-thoughts/issues"
+  },
+  "homepage": "https://github.com/Arcanaut/deep-thoughts#readme"
 }

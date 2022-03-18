@@ -24,9 +24,10 @@ const thoughts = data?.thoughts || [];
   <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
   {loading ? (
     <div>Loading...</div>
-    ): 
-      (<ThoughtList thoughts={thoughts} title="Some Feed for Thought(s)..." /> 
-    )}
+  ) : (
+    <ThoughtList thoughts={thoughts} title="Some Feed for Thought(s)..." />
+  )}
+</div>
           {loggedIn && userData ? (
             <div className="col-12 col-lg-3 mb-3">
               <FriendList
@@ -37,7 +38,7 @@ const thoughts = data?.thoughts || [];
     </div>
   ) : null}
 </div>
-  </div>
+
 </main>
   );
 };
